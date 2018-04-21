@@ -24,7 +24,9 @@ lnx -i (--import)
 
 See the [roadmap](./todo.md).
 
-## Why?
+## Questions/Answers
+
+### Why?
 
 I've been a Pinboard user for years, and have had as many as almost 50,000
 bookmarks saved. Pinboard is a very stable, usable service with lots of nifty
@@ -58,6 +60,23 @@ bookmark), but the goal of `lnx` isn't to provide every possible tool you need
 to manage your bookmarks, but instead to allow to you drop down and write code
 when it makes sense. And since your bookmarks are just a plain JSON object under
 `~/.local/share/lnx.json`, you can use any language you want to manipulate them.
+
+### What about sync?
+
+One of the draws of a service like Pinboard is that it's available everywhere.
+Forunately, with `lnx` your bookmarks are just a file, so you can put them
+anywhere you want. I keep mine in Dropbox:
+
+```sh
+cd ~/.local/share
+mv lnx.json ~/Dropbox/.lnx.json
+ln -s /home/z/Dropbox/.lnx.json lnx.json
+```
+
+### What about a UI?
+
+Maybe I'll add one in the future! Even if I don't, since your bookmarks are just
+JSON it should be somewhat straightfoward to add a web UI yourself.
 
 ## License
 
