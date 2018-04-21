@@ -1,6 +1,6 @@
 {
   "name": "lnx",
-  "description": "lnx",
+  "description": "[WIP] Command line bookmark manager",
   "version": "0.0.1",
   "author": {
     "name": "Zac Anger",
@@ -21,7 +21,10 @@
   },
   "bugs": "https://github.com/zacanger/lnx/issues",
   "keywords": [
-    "",
+    "bookmark",
+    "bookmarks",
+    "link",
+    "links",
     "lnx"
   ],
   "dependencies": {},
