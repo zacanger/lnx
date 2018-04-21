@@ -2,6 +2,8 @@
 
 Command-line bookmark (link) manager
 
+![demo](/demo.gif?raw=true)
+
 --------
 
 ## Installation
