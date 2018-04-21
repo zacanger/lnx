@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
-const main = () => {
+const lnx = require('./src')
 
+const main = () => {
+  lnx()
 }
 
 if (!module.parent) main()

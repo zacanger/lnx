@@ -11,8 +11,10 @@
   "main": "index.js",
   "bin": "./index.js",
   "scripts": {
+    "preversion": "npm t",
     "start": "node index",
-    "test": ""
+    "test": "npm run test:lint",
+    "test:lint": "eslint -c .eslintrc.json index.js src/"
   },
   "homepage": "https://github.com/zacanger/lnx#readme",
   "repository": {
@@ -30,7 +32,15 @@
     "lnx"
   ],
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-eslint": "8.2.3",
+    "eslint": "4.19.1",
+    "eslint-config-zacanger": "3.0.0",
+    "eslint-plugin-babel": "5.1.0",
+    "eslint-plugin-import": "2.11.0",
+    "eslint-plugin-promise": "3.7.0",
+    "eslint-plugin-unicorn": "4.0.3"
+  },
   "engines": {
     "node": ">=8.0.0"
   }
