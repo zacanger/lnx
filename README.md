@@ -10,7 +10,7 @@
 
 ## Usage
 
-Doesn't do anything yet.
+Doesn't do anything yet. See <./todo.md>
 
 ## License
 
