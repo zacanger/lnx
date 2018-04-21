@@ -1,6 +1,6 @@
 # lnx
 
-[WIP] Command-line bookmark manager
+Command-line bookmark (link) manager
 
 --------
 
