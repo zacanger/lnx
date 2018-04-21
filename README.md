@@ -10,7 +10,7 @@
 
 ## Usage
 
-Doesn't do anything yet. See <./todo.md>
+Doesn't do anything yet. See the [roadmap](./todo.md).
 
 ## License
 
