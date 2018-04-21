@@ -10,9 +10,10 @@ module.exports = () => {
       # example:
       lnx -a '{"href","http://foo.bar","tags":["one","two"],"title":"foo bar site"}'
     lnx -d (--delete)
-      # delete a bookmark by id
+      # delete bookmarks by id
       # example:
       lnx -d SyCCkefv-mFnM
+      lnx -d SyCCkefv-mFnM B1dNU-wZQK3M
     lnx -i (--import)
       # import bookmarks from a pinboard format file
       # example:

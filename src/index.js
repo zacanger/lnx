@@ -29,7 +29,7 @@ const handleArgs = () => {
   } else if ([ '-s', '--search' ].includes(firstArg)) {
     searchBookmarks(args[1], args.slice(2), db)
   } else if ([ '-d', '--delete' ].includes(firstArg)) {
-    deleteBookmark(args[1], db)
+    deleteBookmark(args.slice(1), db)
   } else {
     usage()
     exit(0)
