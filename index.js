@@ -1,9 +1,6 @@
 #!/usr/bin/env node
 
-const lnx = require('./src')
+const { exit } = require('zeelib')
 
-const main = () => {
-  lnx()
-}
-
-if (!module.parent) main()
+if (module.parent) exit(1)
+else require('./src')()
