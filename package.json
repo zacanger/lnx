@@ -35,7 +35,7 @@
   "devDependencies": {
     "babel-eslint": "8.2.3",
     "eslint": "4.19.1",
-    "eslint-config-zacanger": "3.0.0",
+    "eslint-config-zacanger": "3.1.0",
     "eslint-plugin-babel": "5.1.0",
     "eslint-plugin-import": "2.11.0",
     "eslint-plugin-promise": "3.7.0",
