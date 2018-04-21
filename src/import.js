@@ -1,6 +1,6 @@
 const shortid = require('shortid')
 const { readFileSync } = require('fs')
-const { exit } = require('zeelib')
+const { exit, length } = require('zeelib')
 
 module.exports = (f, db) => {
   try {
@@ -28,6 +28,7 @@ module.exports = (f, db) => {
       .concat(p)
       .value()
     db.set('lnx', allPosts).write()
+    console.log(`${length(p)} bookmarks imported`)
   } catch (_) {
     console.log('Argument is not a valid pinboard export file.')
     exit(1)
