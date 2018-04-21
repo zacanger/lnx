@@ -1,9 +1,13 @@
 const { exit } = require('zeelib')
 const pj = require('prettyjson')
+const { remove } = require('./util')
 
-module.exports = (type, query, db) => {
+module.exports = (type, search, db) => {
   try {
+    let query = [ ...search ]
     let res
+    const rawFilter = query.find((el) => [ '-r', '--raw' ].includes(el))
+    if (rawFilter) query = remove(query, rawFilter)
     if (type === 'tags') {
       res = db
         .get('lnx')
@@ -18,7 +22,11 @@ module.exports = (type, query, db) => {
     if (!res) {
       console.log(`No bookmarks with ${type} of ${query}`)
     } else {
-      console.log(pj.render(res))
+      if (!!rawFilter) {
+        console.log(JSON.stringify(res, null, 2))
+      } else {
+        console.log(pj.render(res))
+      }
     }
   } catch (_) {
     console.log('Malformed query')
