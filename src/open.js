@@ -1,5 +1,4 @@
-const exit = require('zeelib/lib/exit').default
-const open = require('zeelib/lib/open').default
+const { exit, open } = require('zeelib')
 
 module.exports = (bm) => {
   try {

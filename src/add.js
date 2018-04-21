@@ -1,4 +1,4 @@
-const exit = require('zeelib/lib/exit').default
+const { exit } = require('zeelib')
 
 module.exports = (bm, db) => {
   if (bm) {

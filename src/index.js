@@ -1,7 +1,7 @@
 const xdg = require('xdg-basedir')
 const low = require('lowdb')
 const FileSync = require('lowdb/adapters/FileSync')
-const exit = require('zeelib/lib/exit').default
+const { exit } = require('zeelib')
 
 const args = process.argv.slice(2)
 

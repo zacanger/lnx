@@ -1,5 +1,5 @@
 const { readFileSync } = require('fs')
-const exit = require('zeelib/lib/exit').default
+const { exit } = require('zeelib')
 
 module.exports = (f, db) => {
   try {
