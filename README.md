@@ -26,6 +26,16 @@ See the [roadmap](./todo.md).
 
 ## Questions/Answers
 
+### This is broken!
+
+That's not a question!
+
+If you're on Windows, I'm sorry. I don't have a Windows machine to test on. I'm
+open to patches for Windows compatibility, though.
+
+If you're _not_ on Windows and something is broken, please submit an issue
+and/or a patch/PR!
+
 ### Why?
 
 I've been a Pinboard user for years, and have had as many as almost 50,000
