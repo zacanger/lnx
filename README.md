@@ -2,7 +2,7 @@
 
 Command-line bookmark (link) manager
 
-![demo](/demo.gif?raw=true)
+![screenshot](/screenshot.gif?raw=true)
 
 --------
 
