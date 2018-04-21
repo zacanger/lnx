@@ -13,6 +13,7 @@ db.defaults({ lnx: [] }).write()
 const usage = require('./usage')
 const importFromPinboard = require('./import')
 const addBookmark = require('./add')
+const searchBookmarks = require('./search')
 // const open = require('./open')
 
 const handleArgs = () => {
@@ -24,6 +25,11 @@ const handleArgs = () => {
     addBookmark(args[1], db)
   } else if ([ '-i', '--import' ].includes(firstArg)) {
     importFromPinboard(args[1], db)
+  } else if ([ '-s', '--search' ].includes(firstArg)) {
+    searchBookmarks(args[1], args.slice(2), db)
+  } else {
+    usage()
+    exit(0)
   }
 }
 
