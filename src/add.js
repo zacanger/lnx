@@ -1,3 +1,4 @@
+const shortid = require('shortid')
 const { exit } = require('zeelib')
 
 module.exports = (bm, db) => {
@@ -5,7 +6,7 @@ module.exports = (bm, db) => {
     try {
       const b = JSON.parse(bm)
       if (!b.href || !b.title) throw new Error('Malformed bookmark')
-      const newBookmark = Object.assign({}, b, { time: new Date().toJSON() })
+      const newBookmark = Object.assign({}, b, { id: shortid(), time: new Date().toJSON() })
       db.get('lnx')
         .push(newBookmark)
         .write()

@@ -1,3 +1,4 @@
+const shortid = require('shortid')
 const { readFileSync } = require('fs')
 const { exit } = require('zeelib')
 
@@ -20,7 +21,8 @@ module.exports = (f, db) => {
       title: description,
       description: extended,
       // pinboard tags are a single string and we want an array
-      tags: tags.trim().split(' ').filter(Boolean)
+      tags: tags.trim().split(' ').filter(Boolean),
+      id: shortid()
     }))
     const allPosts = db.get('lnx')
       .concat(p)

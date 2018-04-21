@@ -9,6 +9,10 @@ module.exports = () => {
       # bookmark must have at least href and title
       # example:
       lnx -a '{"href","http://foo.bar","tags":["one","two"],"title":"foo bar site"}'
+    lnx -d (--delete)
+      # delete a bookmark by id
+      # example:
+      lnx -d SyCCkefv-mFnM
     lnx -i (--import)
       # import bookmarks from a pinboard format file
       # example:

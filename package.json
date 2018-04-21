@@ -34,6 +34,7 @@
   "dependencies": {
     "lowdb": "1.0.0",
     "prettyjson": "1.2.1",
+    "shortid": "2.2.8",
     "xdg-basedir": "3.0.0",
     "zeelib": "6.1.11"
   },
