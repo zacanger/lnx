@@ -1,4 +1,5 @@
 const { exit } = require('zeelib')
+const pj = require('prettyjson')
 
 module.exports = (type, query, db) => {
   try {
@@ -17,10 +18,9 @@ module.exports = (type, query, db) => {
     if (!res) {
       console.log(`No bookmarks with ${type} of ${query}`)
     } else {
-      console.log(res)
+      console.log(pj.render(res))
     }
   } catch (_) {
-    console.log(_)
     console.log('Malformed query')
     exit(1)
   }
