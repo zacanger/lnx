@@ -28,19 +28,24 @@ See the [roadmap](./todo.md).
 
 I've been a Pinboard user for years, and have had as many as almost 50,000
 bookmarks saved. Pinboard is a very stable, usable service with lots of nifty
-features. Sometimes it's not flexible enough, though. Say you want to keep all
-bookmarks that have two tags but not a third &mdash; there's no way to do this
-in the web UI, but it's trivial if you can actually program against your
-bookmarks:
+features. Sometimes it's not flexible enough, though.
+
+Say you want to remove all bookmarks that match one tag but not another &mdash;
+this is impossible or at least really awkard in a web UI, but trivial if you can
+just program against your bookmarks:
 
 ```javascript
-const bms = require('./boomarks.json')
+const bms = require('./.local/share/lnx.json').lnx
 const fs = require('fs')
 
-const newBms = bms.filter((bm) =>
-  bm.tags.includes('kdrama') &&
-  bm.tags.includes('yoo-in-na') &&
-  !bm.tags.includes('goblin'))
+const toRemove = bms
+  .filter((bm) =>
+    bm.tags.includes('kdrama') &&
+    bm.tags.includes('goblin') &&
+    !bm.tags.includes('yoo-in-na'))
+  .map((bm) => bm.href)
+
+const newBms = bms.filter((bm) => !toRemove.includes(bm.href))
 
 fs.writeFileSync('./bookmarks.json', JSON.stringify(newBms, null, 2))
 ```
