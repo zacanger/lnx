@@ -25,6 +25,7 @@ lnx -a (--add)
 lnx -d (--delete)
   # delete bookmarks by id
   # example:
+  lnx -d SyCCkefv-mFnM
   lnx -d SyCCkefv-mFnM B1dNU-wZQK3M
 lnx -i (--import)
   # import bookmarks from a pinboard format file
@@ -40,6 +41,11 @@ lnx -s (--search) [-r (--raw)]
   # example:
   lnx -s tags papers cs -r
   lnx -s href http://zacanger.com
+lnx -l (--list) [-r (--raw)]
+  # show all bookmarks
+  # optional -r (--raw) flag will use JSON
+  # example:
+  lnx -l
 lnx -h (--help)
   # show this help message
 ```

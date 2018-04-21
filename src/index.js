@@ -15,6 +15,7 @@ const importFromPinboard = require('./import')
 const addBookmark = require('./add')
 const searchBookmarks = require('./search')
 const deleteBookmark = require('./delete')
+const listAll = require('./all')
 // const open = require('./open')
 
 const handleArgs = () => {
@@ -22,7 +23,9 @@ const handleArgs = () => {
   if (!firstArg || [ '-h', '--help' ].includes(firstArg)) {
     usage()
     exit(0)
-  } else if ([ '-a', '-add' ].includes(firstArg)) {
+  } else if ([ '-l', '--list' ].includes(firstArg)) {
+    listAll(args[1] || false, db)
+  } else if ([ '-a', '--add' ].includes(firstArg)) {
     addBookmark(args[1], db)
   } else if ([ '-i', '--import' ].includes(firstArg)) {
     importFromPinboard(args[1], db)
