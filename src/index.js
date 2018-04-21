@@ -51,10 +51,23 @@ const addBookmark = (bm) => {
 const importFromPinboard = (f) => {
   try {
     const pb = readFileSync(f).toString('utf8').trim()
-    const p = JSON.parse(pb).map(({ description, tags, meta, hash, ...rest }) => ({
-      title: description,
-      tags: tags.split(' '),
+    // we don't need meta, hash, toread, and shared
+    const p = JSON.parse(pb).map(({
+      description,
+      tags,
+      meta,
+      hash,
+      toread,
+      shared,
+      extended,
       ...rest
+    }) => ({
+      ...rest,
+      // fix these silly names
+      title: description,
+      description: extended,
+      // pinboard tags are a single string and we want an array
+      tags: tags.trim().split(' ').filter(Boolean)
     }))
     const allPosts = db.get('lnx')
       .concat(p)
