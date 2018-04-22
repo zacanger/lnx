@@ -75,8 +75,9 @@ this is impossible or at least really awkard in a web UI, but trivial if you can
 just program against your bookmarks:
 
 ```javascript
-const bms = require('./.local/share/lnx.json').lnx
 const fs = require('fs')
+const bmPath = './.local/share/lnx.json'
+const bms = require(bmPath).lnx
 
 const toRemove = bms
   .filter((bm) =>
@@ -87,7 +88,7 @@ const toRemove = bms
 
 const newBms = bms.filter((bm) => !toRemove.includes(bm.href))
 
-fs.writeFileSync('./bookmarks.json', JSON.stringify(newBms, null, 2))
+fs.writeFileSync(bmPath, JSON.stringify(newBms, null, 2))
 ```
 
 Simple! I feel like managing information should always be that easy.
