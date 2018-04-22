@@ -9,6 +9,10 @@
   },
   "license": "MIT",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "src"
+  ],
   "bin": "./index.js",
   "scripts": {
     "preversion": "npm t",
