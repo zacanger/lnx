@@ -50,8 +50,6 @@ lnx -h (--help)
   # show this help message
 ```
 
-See the [roadmap](./todo.md).
-
 ## Questions/Answers
 
 ### This is broken!
@@ -116,6 +114,18 @@ ln -s /home/z/Dropbox/.lnx.json lnx.json
 
 Maybe I'll add one in the future! Even if I don't, since your bookmarks are just
 JSON it should be somewhat straightfoward to add a web UI yourself.
+
+## Roadmap
+
+* Safety: copy all bookmarks before any operations, restore if fail
+* Import from bookmarks.html format
+* Export to bookmarks.html format
+* Dedup/merge
+* Improved interface (yaourt feel, maybe inquirer?)
+  * Interactive edit
+  * Interactive add
+  * Open
+  * Interactive filter/search (fzf feel?)
 
 ## License
 
