@@ -5,14 +5,14 @@ const { exit, length } = require('zeelib')
 module.exports = (f, db) => {
   try {
     const pb = readFileSync(f).toString('utf8').trim()
-    // we don't need meta, hash, toread, and shared
     const p = JSON.parse(pb).map(({
+      hash,
+      meta,
+      shared,
+      toread,
+      // we don't need meta, hash, toread, and shared
       description,
       tags,
-      meta,
-      hash,
-      toread,
-      shared,
       extended,
       ...rest
     }) => ({
