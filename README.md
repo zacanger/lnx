@@ -28,7 +28,7 @@ lnx -d (--delete)
   lnx -d SyCCkefv-mFnM
   lnx -d SyCCkefv-mFnM B1dNU-wZQK3M
 lnx -i (--import)
-  # import bookmarks from a pinboard format file
+  # import bookmarks from a pinboard JSON or bookmarks.html format file
   # example:
   lnx -i ~/Downloads/pinboard_export.json
 lnx -s (--search) [-r (--raw)]
@@ -118,7 +118,6 @@ JSON it should be somewhat straightfoward to add a web UI yourself.
 ## Roadmap
 
 * Safety: copy all bookmarks before any operations, restore if fail
-* Import from bookmarks.html format
 * Export to bookmarks.html format
 * Dedup/merge
 * Improved interface (yaourt feel, maybe inquirer?)
