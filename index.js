@@ -2,5 +2,9 @@
 
 const { exit } = require('zeelib')
 
-if (module.parent) exit(1)
-else require('./src')()
+if (module.parent) {
+  console.error('lnx is a command-line application. please execute lnx.')
+  exit(1)
+}
+
+require('./src')

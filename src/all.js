@@ -5,5 +5,9 @@ module.exports = (raw, db) => {
     .get('lnx')
     .value()
 
-  console.log(r ? JSON.stringify(bms, null, 2) : pj.render(bms))
+  if (!bms || !bms.length) {
+    console.log('No bookmarks yet!')
+  } else {
+    console.log(r ? JSON.stringify(bms, null, 2) : pj.render(bms))
+  }
 }

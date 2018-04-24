@@ -39,4 +39,4 @@ const handleArgs = () => {
   }
 }
 
-module.exports = handleArgs
+module.exports = handleArgs()
