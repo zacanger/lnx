@@ -64,6 +64,9 @@ and/or a patch/PR!
 
 ### Why?
 
+I don't just use one browser! Bookmark managers have been around for a while,
+and lots of people apparently find them useful.
+
 I've been a Pinboard user for years, and have had as many as almost 50,000
 bookmarks saved. Pinboard is a very stable, usable service with lots of nifty
 features. Sometimes it's not flexible enough, though.
