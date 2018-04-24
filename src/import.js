@@ -11,19 +11,20 @@ const isJson = (f) => {
   }
 }
 
-const getCategories = (a) => {
+const getTags = (a) => {
   const node = a.closest('DL').prev()
-  const title = node.text()
-  if ([ 'bookmarks menu', 'bookmarks bar', 'other bookmarks', 'bookmarks' ].includes((title || '').toLowerCase())) {
+  const title = (node.text() || '').trim()
+  if ([ 'bookmarks menu', 'bookmarks bar', 'other bookmarks', 'bookmarks' ].includes(title.toLowerCase())) {
     return []
   }
   if (node.length > 0 && title.length > 0) {
-    return [ title ].concat(getCategories(node))
+    return [ title ].concat(getTags(node)).filter(Boolean)
   } else {
     return []
   }
 }
 
+// https://gist.github.com/Sennahoi/e250ad6714bbdd7f2d7f
 const importHtml = (f, db) => {
   try {
     const data = readFileSync(f).toString('utf8').trim()
@@ -34,7 +35,7 @@ const importHtml = (f, db) => {
       const $a = $(a)
       const title = $a.text()
       const href = $a.attr('href')
-      const tags = getCategories($a)
+      const tags = getTags($a)
       const o = {
         title,
         href,
