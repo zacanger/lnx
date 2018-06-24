@@ -33,6 +33,10 @@ lnx -l (--list) [-r (--raw)]
   # optional -r (--raw) flag will use JSON
   # example:
   lnx -l
+lnx -u (--uniq)
+  # deduplicate bookmarks by href
+  # example:
+  lnx -u
 lnx -h (--help)
   # show this help message
 `)

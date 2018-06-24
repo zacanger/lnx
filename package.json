@@ -41,11 +41,11 @@
     "prettyjson": "1.2.1",
     "shortid": "2.2.8",
     "xdg-basedir": "3.0.0",
-    "zeelib": "7.0.3"
+    "zeelib": "7.0.4"
   },
   "devDependencies": {
-    "babel-eslint": "8.2.3",
-    "eslint": "4.19.1",
+    "babel-eslint": "8.2.5",
+    "eslint": "5.0.0",
     "eslint-config-zacanger": "3.1.4",
     "eslint-plugin-babel": "5.1.0",
     "eslint-plugin-import": "2.12.0",

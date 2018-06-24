@@ -16,23 +16,28 @@ const addBookmark = require('./add')
 const searchBookmarks = require('./search')
 const deleteBookmark = require('./delete')
 const listAll = require('./all')
+const uniqBookmarks = require('./uniq')
+const { argIn } = require('./util')
 // const open = require('./open')
 
 const handleArgs = () => {
   const firstArg = args[0]
-  if (!firstArg || [ '-h', '--help' ].includes(firstArg)) {
+  const incl = argIn(firstArg)
+  if (!firstArg || incl([ '-h', '--help' ])) {
     usage()
     exit(0)
-  } else if ([ '-l', '--list' ].includes(firstArg)) {
+  } else if (incl([ '-l', '--list' ])) {
     listAll(args[1] || false, db)
-  } else if ([ '-a', '--add' ].includes(firstArg)) {
+  } else if (incl([ '-a', '--add' ])) {
     addBookmark(args[1], db)
-  } else if ([ '-i', '--import' ].includes(firstArg)) {
+  } else if (incl([ '-i', '--import' ])) {
     importFromPinboard(args[1], db)
-  } else if ([ '-s', '--search' ].includes(firstArg)) {
+  } else if (incl([ '-s', '--search' ])) {
     searchBookmarks(args[1], args.slice(2), db)
-  } else if ([ '-d', '--delete' ].includes(firstArg)) {
+  } else if (incl([ '-d', '--delete' ])) {
     deleteBookmark(args.slice(1), db)
+  } else if (incl([ '-u', '--unique', '--uniq' ])) {
+    uniqBookmarks(db)
   } else {
     usage()
     exit(0)

@@ -46,6 +46,10 @@ lnx -l (--list) [-r (--raw)]
   # optional -r (--raw) flag will use JSON
   # example:
   lnx -l
+lnx -u (--uniq)
+  # deduplicate bookmarks by href
+  # example:
+  lnx -u
 lnx -h (--help)
   # show this help message
 ```
@@ -122,7 +126,6 @@ JSON it should be somewhat straightfoward to add a web UI yourself.
 
 * Safety: copy all bookmarks before any operations, restore if fail
 * Export to bookmarks.html format
-* Dedup/merge
 * Improved interface (yaourt feel, maybe inquirer?)
   * Interactive edit
   * Interactive add
