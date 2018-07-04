@@ -122,6 +122,21 @@ ln -s /home/z/Dropbox/.lnx.json lnx.json
 Maybe I'll add one in the future! Even if I don't, since your bookmarks are just
 JSON it should be somewhat straightfoward to add a web UI yourself.
 
+
+### What makes up a bookmark?
+
+Here's the type:
+
+```
+type bookmark = {
+  href: string,
+  title: string,
+  time?: Date, # JS: new Date().toJSON()
+  description?: string,
+  tags: Array<?string>
+}
+```
+
 ## Roadmap
 
 * Safety: copy all bookmarks before any operations, restore if fail
