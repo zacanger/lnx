@@ -18,6 +18,7 @@ const listAll = require('./all')
 const uniqBookmarks = require('./uniq')
 // const open = require('./open')
 
+// eslint-disable-next-line complexity
 const handleArgs = () => {
   const firstArg = args[0]
 

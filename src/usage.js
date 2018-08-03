@@ -1,6 +1,6 @@
-module.exports = () => {
-  console.log(`
-lnx
+const { version } = require('../package.json')
+const s = `
+lnx v${version}
 
 usage:
 
@@ -39,5 +39,8 @@ lnx -u (--uniq)
   lnx -u
 lnx -h (--help)
   # show this help message
-`)
+`
+
+module.exports = () => {
+  console.log(s)
 }
