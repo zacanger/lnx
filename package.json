@@ -42,7 +42,7 @@
     "shortid": "2.2.12",
     "xdg-basedir": "3.0.0",
     "zeelib": "7.0.6",
-    "zrgs": "0.0.2"
+    "zrgs": "1.0.0"
   },
   "devDependencies": {
     "babel-eslint": "8.2.6",
