@@ -28,6 +28,10 @@ lnx -s (--search) [-r (--raw)]
   # example:
   lnx -s tags papers cs -r
   lnx -s href http://zacanger.com
+lnx -e (--export)
+  # export bookmarks to browser-compatible bookmarks.html format, to stdout
+  # example:
+  lnx -e > ~/bookmarks-export.html
 lnx -l (--list) [-r (--raw)]
   # show all bookmarks
   # optional -r (--raw) flag will use JSON
