@@ -13,10 +13,6 @@ Command-line bookmark (link) manager
 ## Usage
 
 ```
-lnx
-
-usage:
-
 lnx -a (--add)
   # add a bookmark directly
   # bookmark must have at least href and title
@@ -53,31 +49,6 @@ lnx -u (--uniq)
 lnx -h (--help)
   # show this help message
 ```
-
-## Questions/Answers
-
-### This is broken!
-
-That's not a question!
-
-If you're on Windows, I'm sorry. I don't have a Windows machine to test on. I'm
-open to patches for Windows compatibility, though.
-
-If you're _not_ on Windows and something is broken, please submit an issue
-and/or a patch/PR!
-
-### Why?
-
-I don't just use one browser! Bookmark managers have been around for a while,
-and lots of people apparently find them useful.
-
-I've been a Pinboard user for years, and have had as many as almost 50,000
-bookmarks saved. Pinboard is a very stable, usable service with lots of nifty
-features. Sometimes it's not flexible enough, though.
-
-Say you want to remove all bookmarks that match one tag but not another &mdash;
-this is impossible or at least really awkard in a web UI, but trivial if you can
-just program against your bookmarks:
 
 ```javascript
 const fs = require('fs')
@@ -121,7 +92,6 @@ ln -s /home/z/Dropbox/.lnx.json lnx.json
 
 Maybe I'll add one in the future! Even if I don't, since your bookmarks are just
 JSON it should be somewhat straightfoward to add a web UI yourself.
-
 
 ### What makes up a bookmark?
 
