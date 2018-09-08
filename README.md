@@ -37,10 +37,6 @@ lnx -s (--search) [-r (--raw)]
   # example:
   lnx -s tags papers cs -r
   lnx -s href http://zacanger.com
-lnx -e (--export)
-  # export bookmarks to browser-compatible bookmarks.html format, to stdout
-  # example:
-  lnx -e > ~/bookmarks-export.html
 lnx -l (--list) [-r (--raw)]
   # show all bookmarks
   # optional -r (--raw) flag will use JSON
@@ -96,7 +92,6 @@ ln -s /home/z/Dropbox/.lnx.json lnx.json
 
 Maybe I'll add one in the future! Even if I don't, since your bookmarks are just
 JSON it should be somewhat straightfoward to add a web UI yourself.
-
 
 ### What makes up a bookmark?
 

@@ -16,7 +16,6 @@ const searchBookmarks = require('./search')
 const deleteBookmark = require('./delete')
 const listAll = require('./all')
 const uniqBookmarks = require('./uniq')
-const exportBookmarks = require('./export')
 // const open = require('./open')
 
 // eslint-disable-next-line complexity
@@ -36,8 +35,6 @@ const handleArgs = () => {
     searchBookmarks(args[1], args.slice(2), db)
   } else if (hasFlag('delete')) {
     deleteBookmark(args.slice(1), db)
-  } else if (hasFlag('export')) {
-    exportBookmarks(db)
   } else if (hasFlag('uniq') || hasFlag('unique')) {
     uniqBookmarks(db)
   } else {
