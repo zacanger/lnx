@@ -25,7 +25,7 @@ module.exports = (type, search, db) => {
       if (!!rawFilter) {
         console.log(JSON.stringify(res, null, 2))
       } else {
-        console.log(pj.render(res))
+        console.log(pj.render(res, { inlineArrays: true }))
       }
     }
   } catch (_) {

@@ -8,6 +8,6 @@ module.exports = (raw, db) => {
   if (!bms || !bms.length) {
     console.log('No bookmarks yet!')
   } else {
-    console.log(r ? JSON.stringify(bms, null, 2) : pj.render(bms))
+    console.log(r ? JSON.stringify(bms, null, 2) : pj.render(bms, { inlineArrays: true }))
   }
 }
