@@ -39,19 +39,19 @@
     "cheerio": "1.0.0-rc.2",
     "lowdb": "1.0.0",
     "prettyjson": "1.2.1",
-    "shortid": "2.2.12",
+    "shortid": "2.2.13",
     "xdg-basedir": "3.0.0",
-    "zeelib": "7.0.6",
+    "zeelib": "8.2.2",
     "zrgs": "1.0.0"
   },
   "devDependencies": {
-    "babel-eslint": "8.2.6",
-    "eslint": "5.2.0",
-    "eslint-config-zacanger": "3.4.0",
-    "eslint-plugin-babel": "5.1.0",
-    "eslint-plugin-import": "2.13.0",
-    "eslint-plugin-promise": "3.8.0",
-    "eslint-plugin-unicorn": "5.0.0"
+    "babel-eslint": "10.0.1",
+    "eslint": "5.6.1",
+    "eslint-config-zacanger": "3.4.1",
+    "eslint-plugin-babel": "5.2.1",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-promise": "4.0.1",
+    "eslint-plugin-unicorn": "6.0.1"
   },
   "engines": {
     "node": ">=8.11.1"
