@@ -114,7 +114,6 @@ type bookmark = {
 * Improved interface (yaourt feel, maybe inquirer?)
   * Interactive edit
   * Interactive add
-  * Open
   * Interactive filter/search (fzf feel?)
 
 ## License

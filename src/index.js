@@ -16,7 +16,7 @@ const searchBookmarks = require('./search')
 const deleteBookmark = require('./delete')
 const listAll = require('./all')
 const uniqBookmarks = require('./uniq')
-// const open = require('./open')
+const open = require('./open')
 
 // eslint-disable-next-line complexity
 const handleArgs = () => {
@@ -33,6 +33,8 @@ const handleArgs = () => {
     importFromPinboard(args[1], db)
   } else if (hasFlag('search')) {
     searchBookmarks(args[1], args.slice(2), db)
+  } else if (hasFlag('open')) {
+    open(args[1], db)
   } else if (hasFlag('delete')) {
     deleteBookmark(args.slice(1), db)
   } else if (hasFlag('uniq') || hasFlag('unique')) {

@@ -14,6 +14,10 @@ lnx -d (--delete)
   # example:
   lnx -d SyCCkefv-mFnM
   lnx -d SyCCkefv-mFnM B1dNU-wZQK3M
+lnx -o (--open)
+  # open bookmark by id
+  # example:
+  lnx -o HkBZwQC5YGnnG
 lnx -i (--import)
   # import bookmarks from a pinboard JSON or bookmarks.html format file
   # example:

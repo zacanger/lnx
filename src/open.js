@@ -1,8 +1,9 @@
 const { exit, open } = require('zeelib')
 
-module.exports = (bm) => {
+module.exports = (id, db) => {
   try {
-    open(bm.href)
+    const bm = db.get('lnx').find({ id }).value().href
+    open(bm)
   } catch (_) {
     console.log('Malformed bookmark or no default application')
     exit(1)
