@@ -41,17 +41,17 @@
     "prettyjson": "1.2.1",
     "shortid": "2.2.14",
     "xdg-basedir": "3.0.0",
-    "zeelib": "8.2.2",
-    "zrgs": "1.0.0"
+    "zeelib": "8.5.0",
+    "zrgs": "1.0.1"
   },
   "devDependencies": {
     "babel-eslint": "10.0.1",
-    "eslint": "5.9.0",
-    "eslint-config-zacanger": "3.4.1",
+    "eslint": "5.13.0",
+    "eslint-config-zacanger": "3.4.2",
     "eslint-plugin-babel": "5.3.0",
-    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-import": "2.16.0",
     "eslint-plugin-promise": "4.0.1",
-    "eslint-plugin-unicorn": "6.0.1"
+    "eslint-plugin-unicorn": "7.1.0"
   },
   "engines": {
     "node": ">=8.11.1"
