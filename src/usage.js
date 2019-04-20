@@ -5,10 +5,10 @@ lnx v${version}
 usage:
 
 lnx -a (--add)
-  # add a bookmark directly
+  # add a bookmark interactively
   # bookmark must have at least href and title
   # example:
-  lnx -a '{"href","http://foo.bar","tags":["one","two"],"title":"foo bar site"}'
+  lnx -a
 lnx -d (--delete)
   # delete bookmarks by id
   # example:

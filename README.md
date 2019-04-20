@@ -14,10 +14,10 @@ Command-line bookmark (link) manager
 
 ```
 lnx -a (--add)
-  # add a bookmark directly
+  # add a bookmark interactively
   # bookmark must have at least href and title
   # example:
-  lnx -a '{"href","http://foo.bar","tags":["one","two"],"title":"foo bar site"}'
+  lnx -a
 lnx -d (--delete)
   # delete bookmarks by id
   # example:
@@ -111,9 +111,8 @@ type bookmark = {
 
 * Safety: copy all bookmarks before any operations, restore if fail
 * Export to bookmarks.html format
-* Improved interface (yaourt feel, maybe inquirer?)
+* Improved interface:
   * Interactive edit
-  * Interactive add
   * Interactive filter/search (fzf feel?)
 
 ## Patreon Sponsors

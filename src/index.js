@@ -28,7 +28,7 @@ const handleArgs = () => {
   } else if (hasFlag('list')) {
     listAll(args[1] || false, db)
   } else if (hasFlag('add')) {
-    addBookmark(args[1], db)
+    addBookmark(db)
   } else if (hasFlag('import')) {
     importFromPinboard(args[1], db)
   } else if (hasFlag('search')) {
