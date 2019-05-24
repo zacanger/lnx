@@ -22,7 +22,7 @@ module.exports = (type, search, db) => {
     if (!res) {
       console.log(`No bookmarks with ${type} of ${query}`)
     } else {
-      if (!!rawFilter) {
+      if (rawFilter) {
         console.log(JSON.stringify(res, null, 2))
       } else {
         console.log(pj.render(res, { inlineArrays: true }))

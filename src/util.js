@@ -18,5 +18,5 @@ const prompt = (question) =>
 
 module.exports = {
   prompt,
-  remove,
+  remove
 }

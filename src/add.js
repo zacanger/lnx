@@ -23,7 +23,7 @@ module.exports = async (db) => {
       id,
       tags,
       time,
-      title,
+      title
     }
 
     db.get('lnx')
