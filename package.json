@@ -38,12 +38,12 @@
     "prettyjson": "1.2.1",
     "shortid": "2.2.14",
     "xdg-basedir": "4.0.0",
-    "zeelib": "8.6.0",
-    "zrgs": "1.0.2"
+    "zeelib": "10.0.0",
+    "zrgs": "1.0.3"
   },
   "devDependencies": {
     "sortpack": "1.2.0",
-    "standard": "12.0.1"
+    "standard": "13.0.2"
   },
   "engines": {
     "node": ">=8.11.1"

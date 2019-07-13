@@ -1,12 +1,11 @@
-const { exit } = require('zeelib')
 const pj = require('prettyjson')
 const { remove } = require('./util')
 
 module.exports = (type, search, db) => {
   try {
-    let query = [ ...search ]
+    let query = [...search]
     let res
-    const rawFilter = query.find((el) => [ '-r', '--raw' ].includes(el))
+    const rawFilter = query.find((el) => ['-r', '--raw'].includes(el))
     if (rawFilter) query = remove(query, rawFilter)
     if (type === 'tags') {
       res = db
@@ -30,6 +29,6 @@ module.exports = (type, search, db) => {
     }
   } catch (_) {
     console.log('Malformed query')
-    exit(1)
+    process.exit(1)
   }
 }

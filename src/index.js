@@ -1,7 +1,6 @@
 const xdg = require('xdg-basedir')
 const low = require('lowdb')
 const FileSync = require('lowdb/adapters/FileSync')
-const { exit } = require('zeelib')
 const { args, hasFlag } = require('zrgs')
 
 const dbPath = xdg.data + '/lnx.json'
@@ -24,7 +23,7 @@ const handleArgs = () => {
 
   if (!firstArg || hasFlag('help')) {
     usage()
-    exit(0)
+    process.exit(0)
   } else if (hasFlag('list')) {
     listAll(args[1] || false, db)
   } else if (hasFlag('add')) {
@@ -41,7 +40,7 @@ const handleArgs = () => {
     uniqBookmarks(db)
   } else {
     usage()
-    exit(0)
+    process.exit(0)
   }
 }
 

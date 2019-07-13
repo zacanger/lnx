@@ -1,7 +1,7 @@
 const pj = require('prettyjson')
 
 module.exports = (raw, db) => {
-  const r = raw && [ '-r', '--raw' ].includes(raw)
+  const r = raw && ['-r', '--raw'].includes(raw)
   const bms = db
     .get('lnx')
     .value()

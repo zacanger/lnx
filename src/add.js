@@ -1,5 +1,4 @@
 const shortid = require('shortid')
-const { exit } = require('zeelib')
 const { prompt } = require('./util')
 
 module.exports = async (db) => {
@@ -33,6 +32,6 @@ module.exports = async (db) => {
     console.log(`Added ${href}`)
   } catch (e) {
     console.log(e)
-    exit(1)
+    process.exit(1)
   }
 }

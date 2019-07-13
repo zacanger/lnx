@@ -1,7 +1,6 @@
 const shortid = require('shortid')
 const cheerio = require('cheerio')
 const { readFileSync } = require('fs')
-const { exit, length } = require('zeelib')
 
 const isJson = (f) => {
   try {
@@ -14,11 +13,11 @@ const isJson = (f) => {
 const getTags = (a) => {
   const node = a.closest('DL').prev()
   const title = (node.text() || '').trim()
-  if ([ 'bookmarks menu', 'bookmarks bar', 'other bookmarks', 'bookmarks' ].includes(title.toLowerCase())) {
+  if (['bookmarks menu', 'bookmarks bar', 'other bookmarks', 'bookmarks'].includes(title.toLowerCase())) {
     return []
   }
   if (node.length > 0 && title.length > 0) {
-    return [ title ].concat(getTags(node)).filter(Boolean)
+    return [title].concat(getTags(node)).filter(Boolean)
   } else {
     return []
   }
@@ -51,10 +50,10 @@ const importHtml = (f, db) => {
       .concat(newBms)
       .value()
     db.set('lnx', allBms).write()
-    console.log(`${length(newBms)} bookmarks imported`)
+    console.log(`${newBms.length()} bookmarks imported`)
   } catch (_) {
     console.log('Argument is not a valid bookmarks.html file.')
-    exit(1)
+    process.exit(1)
   }
 }
 
@@ -84,10 +83,10 @@ const importPinboard = (f, db) => {
       .concat(p)
       .value()
     db.set('lnx', allBms).write()
-    console.log(`${length(p)} bookmarks imported`)
+    console.log(`${p.length()} bookmarks imported`)
   } catch (_) {
     console.log('Argument is not a valid pinboard export file.')
-    exit(1)
+    process.exit(1)
   }
 }
 
