@@ -50,7 +50,7 @@ const importHtml = (f, db) => {
       .concat(newBms)
       .value()
     db.set('lnx', allBms).write()
-    console.log(`${newBms.length()} bookmarks imported`)
+    console.log(`${newBms.length} bookmarks imported`)
   } catch (_) {
     console.log('Argument is not a valid bookmarks.html file.')
     process.exit(1)
@@ -83,7 +83,7 @@ const importPinboard = (f, db) => {
       .concat(p)
       .value()
     db.set('lnx', allBms).write()
-    console.log(`${p.length()} bookmarks imported`)
+    console.log(`${p.length} bookmarks imported`)
   } catch (_) {
     console.log('Argument is not a valid pinboard export file.')
     process.exit(1)
