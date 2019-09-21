@@ -36,14 +36,14 @@
     "cheerio": "1.0.0-rc.2",
     "lowdb": "1.0.0",
     "prettyjson": "1.2.1",
-    "shortid": "2.2.14",
+    "shortid": "2.2.15",
     "xdg-basedir": "4.0.0",
-    "zeelib": "10.0.0",
-    "zrgs": "1.0.3"
+    "zeelib": "11.0.2",
+    "zrgs": "2.0.1"
   },
   "devDependencies": {
-    "sortpack": "1.2.0",
-    "standard": "13.0.2"
+    "sortpack": "2.0.1",
+    "standard": "14.3.1"
   },
   "engines": {
     "node": ">=8.11.1"
