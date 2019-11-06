@@ -47,5 +47,10 @@
   },
   "engines": {
     "node": ">=8.11.1"
+  },
+  "funding": {
+    "type": "ko-fi",
+    "url": "https://ko-fi.com/zacanger"
   }
+
 }
