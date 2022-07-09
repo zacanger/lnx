@@ -7,7 +7,7 @@
     "name": "Zac Anger",
     "url": "http://zacanger.com"
   },
-  "license": "LGPL-3.0",
+  "license": "MIT",
   "main": "index.js",
   "files": [
     "index.js",
@@ -33,20 +33,20 @@
     "lnx"
   ],
   "dependencies": {
-    "cheerio": "1.0.0-rc.2",
+    "cheerio": "1.0.0-rc.12",
     "lowdb": "1.0.0",
-    "prettyjson": "1.2.1",
-    "shortid": "2.2.15",
+    "prettyjson": "1.2.5",
+    "shortid": "2.2.16",
     "xdg-basedir": "4.0.0",
-    "zeelib": "11.0.2",
-    "zrgs": "2.0.1"
+    "zeelib": "11.2.0",
+    "zrgs": "2.0.4"
   },
   "devDependencies": {
-    "sortpack": "2.0.1",
-    "standard": "14.3.1"
+    "sortpack": "2.3.0",
+    "standard": "17.0.0"
   },
   "engines": {
-    "node": ">=8.11.1"
+    "node": ">=16.0.0"
   },
   "funding": {
     "type": "ko-fi",
