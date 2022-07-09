@@ -15,7 +15,8 @@
   ],
   "bin": "./index.js",
   "scripts": {
-    "preversion": "sortpack && standard"
+    "test": "sortpack && standard",
+    "preversion": "npm t"
   },
   "homepage": "https://github.com/zacanger/lnx#readme",
   "repository": {
@@ -34,10 +35,10 @@
   ],
   "dependencies": {
     "cheerio": "1.0.0-rc.12",
-    "lowdb": "1.0.0",
+    "lowdb": "3.0.0",
     "prettyjson": "1.2.5",
     "shortid": "2.2.16",
-    "xdg-basedir": "4.0.0",
+    "xdg-basedir": "5.1.0",
     "zeelib": "11.2.0",
     "zrgs": "2.0.4"
   },
