@@ -1,7 +1,5 @@
 # lnx
 
-**Unmaintained** Try [Buku](https://github.com/jarun/Buku), it has many more features and is more actively maintained.
-
 --------
 
 Command-line bookmark (link) manager
